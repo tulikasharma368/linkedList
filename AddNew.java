@@ -21,6 +21,18 @@ public class AddNew<k> {
 		}
 	}
 	
+	public void append(INode<k> newNode) {
+		if(this.head==null)
+			this.head=newNode;
+		if(this.tail==null)
+			this.tail=newNode;
+		else {
+			this.tail.setNext(newNode);
+			this.tail=newNode;
+			
+		}
+	}
+	
 	public void print() {
 		StringBuffer myNodes = new StringBuffer("My Nodes are : ");
 		INode<k> tempNode = head;
