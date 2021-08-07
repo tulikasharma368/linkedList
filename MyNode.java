@@ -1,20 +1,28 @@
 package linkedList;
 
-public class MyNode <k> {
+public class MyNode<k> implements INode<k> {
 	private k key;
-	private MyNode next;
+	private INode<k> next;
 	
 	public MyNode(k key) {
 		this.key = key;
 		this.next = null;
 	}
+	
+	public k getKey() {
+		return key;
+	}
 
-	public MyNode getNext() {
+	public void setKey(k key) {
+		this.key = key;
+	}
+
+	public INode<k> getNext() {
 		return next;
 	}
 
-	public void setNext(MyNode next) {
-		this.next = next;
+	public void setNext(INode<k> next) {
+		this.next = (MyNode<k>)next;
 	}
 	
 	
