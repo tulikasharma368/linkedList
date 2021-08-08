@@ -46,8 +46,8 @@ public class AddNew<k> {
 	}
 	
 	public void popLast() {
-		INode temp = this.tail;
-		INode tempNode = head; // TODO Auto-generated method stub
+		INode<k> temp = this.tail;
+		INode<k> tempNode = head; // TODO Auto-generated method stub
 		while(!tempNode.getNext().equals(tail)) {
 			tempNode = tempNode.getNext();
 		}
@@ -56,7 +56,24 @@ public class AddNew<k> {
 		System.out.println("Popped element: " + temp.getKey());
 	}
 	
-	
+	public void search(k key) {
+		INode<k> tempNode = this.head;
+		int i=1;
+		while(tempNode!=null) {
+			if(tempNode.getKey() == key) {
+				System.out.println("Element "+key+" found at position " + i);
+				break;
+			}
+			i++;
+			tempNode=tempNode.getNext();
+			if(tempNode.getNext()==null && tempNode.getKey()!= key)
+			{
+				System.out.println("Element "+key+" not found");
+				break;
+			}
+		}
+			
+	}
 	public void print() {
 		StringBuffer myNodes = new StringBuffer("My Nodes are : ");
 		INode<k> tempNode = head;
