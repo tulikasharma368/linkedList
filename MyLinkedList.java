@@ -9,8 +9,8 @@ public class MyLinkedList {
 		
 		AddNew addNew = new AddNew();
 		addNew.add(myFirstNode);
-		addNew.append(mySecondNode);
 		addNew.append(myThirdNode);
+		addNew.insert(myFirstNode, mySecondNode);
 		addNew.print();
 	}
 	
