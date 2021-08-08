@@ -11,10 +11,10 @@ public class MyLinkedList {
 		addNew.add(myFirstNode);
 		addNew.append(myThirdNode);
 		addNew.insert(myFirstNode, mySecondNode);
-		System.out.println("List before popping first");
+		System.out.println("List before popping last");
 		addNew.print();
-		addNew.pop();
-		System.out.println("List after popping first");
+		addNew.popLast();
+		System.out.println("List after popping last");
 		addNew.print();		
 	}
 	
