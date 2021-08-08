@@ -12,7 +12,8 @@ public class MyLinkedList {
 		addNew.append(myThirdNode);
 		addNew.insert(myFirstNode, mySecondNode);
 		addNew.print();
-		addNew.search(30);		
+		addNew.delete(30);
+		addNew.print();
 	}
 	
 }
