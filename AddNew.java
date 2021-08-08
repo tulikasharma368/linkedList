@@ -45,6 +45,18 @@ public class AddNew<k> {
 		System.out.println("Popped element: "+temp.getKey());
 	}
 	
+	public void popLast() {
+		INode temp = this.tail;
+		INode tempNode = head; // TODO Auto-generated method stub
+		while(!tempNode.getNext().equals(tail)) {
+			tempNode = tempNode.getNext();
+		}
+		this.tail = tempNode;
+		tail.setNext(null);
+		System.out.println("Popped element: " + temp.getKey());
+	}
+	
+	
 	public void print() {
 		StringBuffer myNodes = new StringBuffer("My Nodes are : ");
 		INode<k> tempNode = head;
