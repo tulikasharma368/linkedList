@@ -37,7 +37,12 @@ public class AddNew<k> {
 		INode<k> temp=myNode.getNext();
 		myNode.setNext(newNode);
 		newNode.setNext(temp);
-		
+	}
+	
+	public  void pop() {
+		INode<k> temp = this.head;
+		this.head=head.getNext();
+		System.out.println("Popped element: "+temp.getKey());
 	}
 	
 	public void print() {
