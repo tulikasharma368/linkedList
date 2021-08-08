@@ -33,6 +33,13 @@ public class AddNew<k> {
 		}
 	}
 	
+	public void insert(INode<k> myNode, INode<k> newNode) {
+		INode<k> temp=myNode.getNext();
+		myNode.setNext(newNode);
+		newNode.setNext(temp);
+		
+	}
+	
 	public void print() {
 		StringBuffer myNodes = new StringBuffer("My Nodes are : ");
 		INode<k> tempNode = head;
